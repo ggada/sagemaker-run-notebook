@@ -14,6 +14,11 @@ RUN if which python; then echo Python already installed; else \
     update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1 && \
     pip install --upgrade pip && \
     rm -rf /var/lib/apt/lists/*; fi
+
+# Install gcc required for pyahocorasick
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends gcc libc-dev
+
 COPY requirements.txt /tmp/requirements.txt
 RUN pip install papermill jupyter nteract-scrapbook boto3 requests && pip install -r /tmp/requirements.txt
 
