@@ -1,3 +1,14 @@
 scikit-learn
 pandas
 matplotlib
+# new
+sagemaker
+nltk
+s3fs
+ftfy
+boltons
+contractions
+gensim
+ipython-sql
+psycopg2
+boto3
