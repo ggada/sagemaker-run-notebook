@@ -9,6 +9,5 @@ ftfy
 boltons
 contractions
 gensim
-ipython-sql
-psycopg2
+awswrangler
 boto3
